@@ -26,7 +26,8 @@ public class PanchangActivity extends AppCompatActivity {
     }
 
     private String calculatePanchang() {
-        // TO DO: Implement actual Vedic Panchang calculation logic here
-        return "Actual Vedic Panchang data";
+        // Implement actual Vedic Panchang calculation logic here
+        // For now, return a dummy value
+        return "Today's Vedic Panchang: Sun is in Leo";
     }
 }
