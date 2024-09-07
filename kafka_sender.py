@@ -10,4 +10,7 @@ if __name__ == "__main__":
     bootstrap_servers = "localhost:9092"
     topic = "my_topic"
     message = {"key": "value"}
-    send_message(bootstrap_servers, topic, message)
+    try:
+        send_message(bootstrap_servers, topic, message)
+    except Exception as e:
+        print(f"Error sending message: {e}")

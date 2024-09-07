@@ -8,4 +8,4 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-CMD ["python", "kafka_sender.py"] && ["python", "kafka_receiver.py"]
+CMD ["python", "kafka_sender.py"] && ["python", "kafka_receiver.py"] && tail -f /dev/null

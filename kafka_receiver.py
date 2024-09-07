@@ -9,4 +9,7 @@ def receive_message(bootstrap_servers, topic):
 if __name__ == "__main__":
     bootstrap_servers = "localhost:9092"
     topic = "my_topic"
-    receive_message(bootstrap_servers, topic)
+    try:
+        receive_message(bootstrap_servers, topic)
+    except Exception as e:
+        print(f"Error receiving message: {e}")
