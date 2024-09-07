@@ -20,7 +20,13 @@ public class PanchangActivity extends AppCompatActivity {
     }
 
     private String getPanchangData() {
-        // TO DO: Implement Vedic Panchang calculation logic here
-        return "Vedic Panchang data will be displayed here";
+        // Calculate Vedic Panchang data
+        String panchangData = calculatePanchang();
+        return panchangData;
+    }
+
+    private String calculatePanchang() {
+        // TO DO: Implement actual Vedic Panchang calculation logic here
+        return "Actual Vedic Panchang data";
     }
 }
