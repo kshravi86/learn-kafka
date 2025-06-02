@@ -21,7 +21,7 @@ class BusCRUDTests(TestCase):
         # Sane default for departure and arrival times, using strftime to format them as expected by the form
         departure_time_str = timezone.now().strftime('%Y-%m-%d %H:%M:%S')
         arrival_time_str = (timezone.now() + timezone.timedelta(hours=3)).strftime('%Y-%m-%d %H:%M:%S')
-
+        
         response = self.client.post(reverse('bus_create'), {
             'bus_name': 'New Bus',
             'source': 'City C',
