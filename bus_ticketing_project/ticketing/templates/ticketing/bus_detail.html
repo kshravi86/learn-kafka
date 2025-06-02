@@ -1,0 +1,11 @@
+<h1>{{ bus.bus_name }}</h1>
+<p><strong>Source:</strong> {{ bus.source }}</p>
+<p><strong>Destination:</strong> {{ bus.destination }}</p>
+<p><strong>Departure:</strong> {{ bus.departure_time }}</p>
+<p><strong>Arrival:</strong> {{ bus.arrival_time }}</p>
+<p><strong>Price:</strong> ${{ bus.price }}</p>
+
+<a href="{% url 'bus_update' bus.pk %}">Edit</a>
+<a href="{% url 'bus_delete' bus.pk %}">Delete</a>
+<br>
+<a href="{% url 'bus_list' %}">Back to list</a>

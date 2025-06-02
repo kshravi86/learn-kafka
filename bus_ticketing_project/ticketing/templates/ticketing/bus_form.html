@@ -1,0 +1,13 @@
+{% if form.instance.pk %}
+    <h1>Edit Bus</h1>
+{% else %}
+    <h1>Add New Bus</h1>
+{% endif %}
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save</button>
+</form>
+<br>
+<a href="{% url 'bus_list' %}">Cancel</a>

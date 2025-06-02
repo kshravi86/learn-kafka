@@ -1,0 +1,8 @@
+<h1>Delete Bus</h1>
+<p>Are you sure you want to delete "{{ object.bus_name }}"?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Confirm Delete</button>
+</form>
+<br>
+<a href="{% url 'bus_detail' object.pk %}">Cancel</a>

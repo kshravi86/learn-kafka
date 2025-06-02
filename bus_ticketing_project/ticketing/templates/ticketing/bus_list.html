@@ -1,0 +1,12 @@
+<h1>Buses</h1>
+<a href="{% url 'bus_create' %}">Add New Bus</a>
+<ul>
+    {% for bus in buses %}
+        <li>
+            <a href="{% url 'bus_detail' bus.pk %}">{{ bus.bus_name }}</a>
+            ({{ bus.source }} to {{ bus.destination }})
+        </li>
+    {% empty %}
+        <li>No buses available.</li>
+    {% endfor %}
+</ul>
