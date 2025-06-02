@@ -1,1 +1,4 @@
 kafka-python
+fastapi
+uvicorn[standard]
+email-validator
