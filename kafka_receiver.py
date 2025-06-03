@@ -1,10 +1,15 @@
-from kafka import KafkaConsumer
 import json
 
+from kafka import KafkaConsumer
+
+
 def receive_message(bootstrap_servers, topic):
-    consumer = KafkaConsumer(topic, bootstrap_servers=bootstrap_servers, group_id="my_group")
+    consumer = KafkaConsumer(
+        topic, bootstrap_servers=bootstrap_servers, group_id="my_group"
+    )
     for message in consumer:
-        print(json.loads(message.value.decode('utf-8')))
+        print(json.loads(message.value.decode("utf-8")))
+
 
 if __name__ == "__main__":
     bootstrap_servers = "localhost:9092"

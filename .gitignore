@@ -1,2 +1,30 @@
-.aider*
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*~
+
+# Environment
 .env
+venv/
+.venv/
+env/
+ENV/
+
+# Flask
+instance/
+app.db
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated
+.DS_Store
+Thumbs.db
+
+# Custom
+.aider*

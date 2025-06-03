@@ -1,10 +1,13 @@
-from kafka import KafkaProducer
 import json
+
+from kafka import KafkaProducer
+
 
 def send_message(bootstrap_servers, topic, message):
     producer = KafkaProducer(bootstrap_servers=bootstrap_servers)
-    producer.send(topic, value=json.dumps(message).encode('utf-8'))
+    producer.send(topic, value=json.dumps(message).encode("utf-8"))
     producer.flush()
+
 
 if __name__ == "__main__":
     bootstrap_servers = "localhost:9092"
